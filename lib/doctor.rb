@@ -21,7 +21,7 @@ class Doctor
     self.songs.collect{|song| song.genre}.uniq
   end
 
-  def new_song(name, genre)
+  def new_appointment(name, genre)
     Song.new(name, self, genre)
   end
 

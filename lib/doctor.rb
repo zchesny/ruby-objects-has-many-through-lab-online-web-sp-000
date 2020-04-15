@@ -17,7 +17,7 @@ class Doctor
     Song.all.select{|song| song.artist == self}
   end
 
-  def genres
+  def patients
     self.songs.collect{|song| song.genre}.uniq
   end
 

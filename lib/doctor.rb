@@ -14,7 +14,7 @@ class Doctor
   end
 
   def appointments
-    Appointment.all.select{|app| song.doctor == app}
+    Appointment.all.select{|app| app.doctor == app}
   end
 
   def patients

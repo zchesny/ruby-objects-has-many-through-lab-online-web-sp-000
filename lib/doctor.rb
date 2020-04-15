@@ -14,15 +14,15 @@ class Doctor
   end
 
   def appointments
-    Song.all.select{|song| song.artist == self}
+    Appointment.all.select{|app| song.doctor == app}
   end
 
   def patients
-    self.songs.collect{|song| song.genre}.uniq
+    self.appointments.collect{|song| song.genre}.uniq
   end
 
   def new_appointment(name, genre)
-    Song.new(name, self, genre)
+    Appointment.new(name, self, genre)
   end
 
 end

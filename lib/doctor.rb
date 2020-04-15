@@ -18,7 +18,7 @@ class Doctor
   end
 
   def patients
-    self.appointments.collect{|song| song.genre}.uniq
+    self.appointments.collect{|app| app.patient}.uniq
   end
 
   def new_appointment(name, genre)

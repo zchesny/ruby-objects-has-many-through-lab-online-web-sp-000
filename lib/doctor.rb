@@ -21,8 +21,8 @@ class Doctor
     self.appointments.collect{|app| app.patient}.uniq
   end
 
-  def new_appointment(name, genre)
-    Appointment.new(name, self, genre)
+  def new_appointment(name, patient)
+    Appointment.new(name, self, patient)
   end
 
 end

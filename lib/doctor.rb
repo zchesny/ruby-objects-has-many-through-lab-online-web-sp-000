@@ -13,7 +13,7 @@ class Doctor
     @@all
   end
 
-  def songs
+  def appointments
     Song.all.select{|song| song.artist == self}
   end
 
